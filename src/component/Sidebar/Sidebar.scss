@@ -4,18 +4,21 @@
 .sidebar {
 
     width: 22.8rem;
-    display: flex;
-    justify-content: left;
+    justify-content: right;
     padding: $padding__sidebar;
     padding-left: 0;
+    position: fixed;
+    background-color: $primary__white;
 
 
 }
 
 .profile {
+    position: absolute;
+    right: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: left;
     align-items: center;
 
 
@@ -31,7 +34,6 @@
 
     }
     &__username {
-
         font-weight: 800;
         margin-bottom: 0;
 
@@ -46,6 +48,8 @@
 // suggestions 
 
 .suggestions {
+    
+    width: 100%;
     &__title{
 
     }
