@@ -14,7 +14,7 @@ function Sidebar() {
           <p className="profile__name">Patrick McCullough</p>
         </div>
         <div className="suggestions">
-          <h3 className="suggestions__title">Suggestions for you test</h3>
+          <h3 className="suggestions__title">Suggestions for you</h3>
         </div>
       </div>
     </div>
