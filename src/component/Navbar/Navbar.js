@@ -35,7 +35,7 @@ function Navbar() {
         </NavLink>
         <NavLink className="navigation__container">
           <img className="navigation__icon" src={notificationsIcon} />
-          <h3 className="navigation__item">Notification</h3>
+          <h3 className="navigation__item">Notifications</h3>
         </NavLink>
         <NavLink className="navigation__container">
           <img className="navigation__icon" src={createIcon} />
