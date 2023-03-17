@@ -58,10 +58,47 @@
 .suggestions {
 
     width: 100%;
-
-    
+    padding-right: 5rem;
+    margin-top: 3rem;
     
     &__title{
+        color: $primary__grey;
+        font-weight: 700;
+        font-size: 1.15rem;
+    }
+
+    &__container {
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    &__channel {
+
+        display: flex;
+
+    
+
+    }
+
+    &__image{
+        width: 1.9rem;
+        height: 1.9rem;
+        align-self: center;
+        margin-right: 0.5rem;
+
+    }
+
+    &__name {
+        font-weight: 700;
+
+    }
+    &__follow{
+
+        color: $accent;
+        font-weight: 700;
+
     }
 }
 

@@ -1,5 +1,9 @@
 //image
 import profilePhoto from "../../assets/images/patrick.png";
+import lemonde from "../../assets/images/lemonde.png";
+import codeandcoffee from "../../assets/images/codeandcoffee.png";
+import codingbeast from "../../assets/images/codingbeast.png";
+import vivreparis from "../../assets/images/vivreparis.png";
 
 // stylesheet
 import "./Sidebar.scss";
@@ -15,6 +19,34 @@ function Sidebar() {
         </div>
         <div className="suggestions">
           <h3 className="suggestions__title">Suggestions for you</h3>
+          <div className="suggestions__container">
+            <div className="suggestions__channel">
+              <img className="suggestions__image" src={lemonde} />
+              <h3 className="suggestions__name">Lemondefr 🔵</h3>
+            </div>
+            <p className="suggestions__follow">follow</p>
+          </div>
+          <div className="suggestions__container">
+            <div className="suggestions__channel">
+              <img className="suggestions__image" src={codingbeast} />
+              <h3 className="suggestions__name">coding.beast</h3>
+            </div>
+            <p className="suggestions__follow">follow</p>
+          </div>
+          <div className="suggestions__container">
+            <div className="suggestions__channel">
+              <img className="suggestions__image" src={vivreparis} />
+              <h3 className="suggestions__name">vivreparis</h3>
+            </div>
+            <p className="suggestions__follow">follow</p>
+          </div>
+          <div className="suggestions__container">
+            <div className="suggestions__channel">
+              <img className="suggestions__image" src={codeandcoffee} />
+              <h3 className="suggestions__name">nyccodecoffee</h3>
+            </div>
+            <p className="suggestions__follow">follow</p>
+          </div>
         </div>
       </div>
     </div>
