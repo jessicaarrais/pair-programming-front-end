@@ -50,9 +50,12 @@
     &__posts{
         width: 100%;
         display: flex;
+        flex-wrap: wrap;
 
         &-container {
             width: 100%;
+            flex-wrap: wrap;
+        
             border-top: 1px solid $primary__light-grey;
             margin-top: 5rem;
             display: flex;
@@ -67,9 +70,31 @@
 
             &:first-child{
                 color: $primary__dark;
-                font-weight: bold;
             }
+
+        }
+        &-name {
+           
+        }
+        &-active {
+            font-weight: 800;
+        }
+    }
+
+    &__post{
+
+        &-image {
+            width: 16.4rem;
+            height: 16.4rem;
+        }
+    }
+
+    &__images{
+        &-container {
+            width: 100%;
+            margin-top: 1.5rem;
         }
     }
 
 }
+

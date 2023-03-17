@@ -39,7 +39,7 @@ function ProfilePage() {
         <div className="profile__posts-container">
           <div className="profile__posts-section">
             <img className="profile__posts-icon" />
-            <h3 className="profile__posts-name">POSTS</h3>
+            <h3 className="profile__posts-active">POSTS</h3>
           </div>
           <div className="profile__posts-section">
             <img className="profile__posts-icon" />
@@ -49,9 +49,10 @@ function ProfilePage() {
             <img className="profile__posts-icon" />
             <h3 className="profile__posts-name">TAGGED</h3>
           </div>
-        </div>
-        <div className="profile__images-container">
-          <img className="profile__image" />
+
+          <div className="profile__images-container">
+            <img className="profile__post-image" src={patrick} />
+          </div>
         </div>
       </div>
     </div>
