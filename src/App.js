@@ -1,20 +1,27 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { useState } from "react";
 
 // components
 import Home from "./pages/Home/Home";
 import Navbar from "./component/Navbar/Navbar";
-import CreatePost from "./pages/CreatePost/CreatePost";
+import CreatePost from "./pages/Post/CreatePost";
 
 //stylesheet
 import "./styles/partials/_global.scss";
 
 function App() {
+  // useState post
+  const [posts, setPosts] = useState([]);
+
   return (
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/user/:userId/post" element={<CreatePost />} />
+        <Route path="/" element={<Home posts={posts} setPosts={setPosts} />} />
+        <Route
+          path="/user/:userId/post"
+          element={<CreatePost setPosts={setPosts} />}
+        />
       </Routes>
     </BrowserRouter>
   );

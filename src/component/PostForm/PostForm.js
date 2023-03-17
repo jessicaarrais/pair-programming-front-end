@@ -2,7 +2,7 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "./PostForm.scss";
 
-function PostForm() {
+function PostForm({ setPosts }) {
   // const modalRef = useRef();
   // const overlayRef = useRef();
   // const inputRef = useRef();
@@ -17,25 +17,30 @@ function PostForm() {
     // if (e.taget.image.value.trim()) {
     // }
 
-    const file = e.target.image.files[0];
-    const reader = new FileReader();
-    reader.readAsDataURL(file);
-    reader.onloadend = function () {
-      console.log(reader.result);
+    // const file = e.target.image.files[0];
+    // const reader = new FileReader();
+    // reader.readAsDataURL(file);
+    // reader.onloadend = function () {
+    //   console.log(reader.result);
 
-      axios
-        .post(`http://localhost:8000/user/2/post`, {
-          description: e.taget.description.value,
-          image: reader,
-          location: e.target.location.value,
-        })
-        .then((res) => {
-          console.log(res.data);
-        })
-        .catch((err) => {
-          console.error(err);
-        });
-    };
+    axios
+      .post(`http://localhost:8000/user/9/post`, {
+        // image: reader,
+        description: e.target.description.value,
+        location: e.target.location.value,
+      })
+      .then((res) => {
+        axios
+          .get("http://localhost:8000/posts")
+          .then((res) => setPosts(res.data))
+          .catch((err) => {
+            console.error(err);
+          });
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+    // };
     navigate("/");
   };
 
@@ -69,11 +74,7 @@ function PostForm() {
         >
           CANCEL
         </button>
-        <button
-          className="upload__button--save"
-          type="button"
-          onClick={onClickSave}
-        >
+        <button className="upload__button--save" type="submit">
           CREATE
         </button>
       </div>
