@@ -68,13 +68,13 @@ function PostForm({ setPosts }) {
       />
       <div className="upload__button-box">
         <button
-          className="upload__button--cancel"
+          className="upload__button upload__button--cancel"
           type="button"
           onClick={onClickCancel}
         >
           CANCEL
         </button>
-        <button className="upload__button--save" type="submit">
+        <button className="upload__button upload__button--save" type="submit">
           CREATE
         </button>
       </div>
