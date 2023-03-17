@@ -7,6 +7,7 @@
   position: fixed;
   padding: $padding__nav;
   border-right: 1px solid $primary__light-grey;
+  z-index: 1;
 
   &__logo {
     width: 5.6rem;
