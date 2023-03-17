@@ -1,0 +1,70 @@
+// .modal {
+//   display: flex;
+//   flex-direction: column;
+//   justify-content: center;
+//   gap: $m-margin-between-components;
+//   width: 75vw;
+//   min-height: 10rem;
+//   padding: $m-padding-between-components;
+//   position: absolute;
+//   top: 15%;
+//   right: 50%;
+//   transform: translateX(50%);
+//   background-color: $primary-light-color;
+//   border: 0.063rem solid $primary-light-color;
+//   border-radius: $m-default-border-radius;
+//   z-index: 2;
+
+//   &--hidden {
+//     display: none;
+//   }
+
+//   @include tablet {
+//     width: 35vw;
+//   }
+
+//   @include desktop {
+//     width: 20vw;
+//   }
+
+//   &__title {
+//     @include m-page-header($primary-dark-color);
+//   }
+
+//   &__button-box {
+//     display: flex;
+//     justify-content: space-between;
+//   }
+
+//   &__input {
+//     box-sizing: border-box;
+//     background-color: $secondary-light-color;
+//     width: 100%;
+//     height: 2.5rem;
+//     padding: $m-half-margin-between-components;
+//     border: 0.063rem solid $secondary-neutral-color;
+//     border-radius: $m-default-border-radius;
+
+//     &:focus {
+//       outline: none;
+//       border: 0.063rem solid $primary-dark-color;
+//     }
+//   }
+// }
+
+// .overlay {
+//   position: fixed;
+//   top: 0;
+//   bottom: 0;
+//   left: 0;
+//   right: 0;
+//   width: 100%;
+//   height: 100%;
+//   background: rgba(0, 0, 0, 0.5);
+//   backdrop-filter: blur(0.15rem);
+//   z-index: 1;
+
+//   &--hidden {
+//     display: none;
+//   }
+// }
