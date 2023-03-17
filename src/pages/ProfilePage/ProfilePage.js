@@ -38,7 +38,6 @@ function ProfilePage() {
                 <p>{user.bio}</p>
               </div>
             </div>
-
             <div className="profile__posts">
               <div className="profile__posts-container">
                 <div className="profile__posts-section">
