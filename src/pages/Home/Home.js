@@ -5,19 +5,6 @@ import { useEffect, useState } from "react";
 import Post from "../../component/Post/Post";
 import Sidebar from "../../component/Sidebar/Sidebar";
 
-// {
-//     "username": "Armance",
-//     "avatar": "",
-//     "id": "11",
-//     "userId": "1",
-//     "timestamp": "1678994591493",
-//     "image": "",
-//     "location": "New York",
-//     "description": "Having the best time in NYC!",
-//     "likes": 1013,
-//     "comments": 110
-// }
-
 // stylesheet
 import "./Home.scss";
 
