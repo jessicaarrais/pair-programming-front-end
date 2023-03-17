@@ -7,7 +7,7 @@ import "./Sidebar.scss";
 function Sidebar() {
   return (
     <div className="sidebar">
-      <div className="profile">
+      <div className="profile-sidebar">
         <img className="profile__image" src={profilePhoto} />
         <div className="profile__content">
           <h3 className="profile__username">_patrick89</h3>

@@ -5,21 +5,29 @@
 
     width: 22.8rem;
     justify-content: right;
-    padding: $padding__sidebar;
+    height: 40rem;
+    flex-wrap: wrap;
+    // padding: $padding__sidebar;
     padding-left: 0;
     position: fixed;
     background-color: $primary__white;
+    margin-left: 90rem;
 
 
 }
 
 .profile {
+
+    &-sidebar {
+    z-index: -1;
     position: absolute;
     right: 0;
     display: flex;
     flex-wrap: wrap;
     justify-content: left;
     align-items: center;
+    margin-top: 2.2rem;
+    }
 
 
     &__image{
@@ -48,10 +56,12 @@
 // suggestions 
 
 .suggestions {
-    
-    width: 100%;
-    &__title{
 
+    width: 100%;
+
+    
+    
+    &__title{
     }
 }
 
