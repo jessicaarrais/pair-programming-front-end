@@ -1,8 +1,21 @@
 import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import "./PostForm.scss";
 
 function PostForm() {
-  const handleSubmit = (e) => {
+  // const modalRef = useRef();
+  // const overlayRef = useRef();
+  // const inputRef = useRef();
+  const navigate = useNavigate();
+
+  const onClickCancel = (_e) => {
+    navigate("/");
+  };
+
+  const onClickSave = (e) => {
     e.preventDefault();
+    // if (e.taget.image.value.trim()) {
+    // }
 
     const file = e.target.image.files[0];
     const reader = new FileReader();
@@ -10,27 +23,60 @@ function PostForm() {
     reader.onloadend = function () {
       console.log(reader.result);
 
-      const data = reader.result.replace(/^data:image\/\w+;base64,/, "");
-
       axios
         .post(`http://localhost:8000/user/2/post`, {
-          description: "Me having fun",
-          image: data,
-          location: "New York",
+          description: e.taget.description.value,
+          image: reader,
+          location: e.target.location.value,
         })
         .then((res) => {
           console.log(res.data);
+        })
+        .catch((err) => {
+          console.error(err);
         });
     };
+    navigate("/");
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <input type="file" name="image" />
-
-      <img src="" height="200" alt="Image preview..." />
-
-      <button>CREATE</button>
+    <form className="upload" onSubmit={onClickSave}>
+      <img />
+      <h3 className="upload__subtitle">Post photos here</h3>
+      <input
+        className="upload__button--select"
+        type="file"
+        name="image"
+        text="Select From Computer"
+      />
+      <input
+        className="upload__input"
+        type="text"
+        name="location"
+        placeholder="Location"
+      />
+      <input
+        className="upload__input"
+        type="text"
+        name="description"
+        placeholder="description"
+      />
+      <div className="upload__button-box">
+        <button
+          className="upload__button--cancel"
+          type="button"
+          onClick={onClickCancel}
+        >
+          CANCEL
+        </button>
+        <button
+          className="upload__button--save"
+          type="button"
+          onClick={onClickSave}
+        >
+          CREATE
+        </button>
+      </div>
     </form>
   );
 }
