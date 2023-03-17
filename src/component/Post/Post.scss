@@ -1,64 +1,25 @@
 @use "../../styles/partials/variables" as *;
 
 .post {
+  width: 100%;
+  margin-left: 20rem;
+  margin-right: 29rem;
+  margin-top: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid $primary__light-grey;
 
-    width: 100%;
-    margin-left: 20rem;
-    margin-right: 29rem;
-    margin-top: 1.5rem;
-    padding-bottom: 1rem;
-    border-bottom: 1px solid $primary__light-grey;
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.625rem;
 
-    &__info {
-
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        margin-bottom: 0.625rem;
-
-        &-container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+    &-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-   
-    &__avatar {
-        width: 1.75rem;
-        height: 1.75rem;
-        border-radius: 50%;
-        margin-right: 0.5rem;
-    }
-
-    &__username {
-        margin-bottom: 0;
-        margin-top: 0;
-        margin-right: 0.5rem;
-        font-weight: 800;
-    }
-
-    &__date {
-        color: $primary__grey;
-        font-weight: 500;
-        margin-left: 0.3rem;
-        font-size: 0.85rem;
-    }
-
-    &__location {
-        margin-top: 0.1rem;
-        font-size: 0.8rem;
-    }
-
-    &__dots {
-        width: 0.8rem;
-        height: 0.24rem;
-    }
-  
-    &__image {
-        height: 31rem;
-        width: 100%;
-        border-radius: 1%;
-    }
+  }
 
   &__avatar {
     width: 1.75rem;
@@ -93,6 +54,43 @@
 
   &__image {
     height: 31rem;
+    width: 100%;
+    border-radius: 1%;
+  }
+
+  &__avatar {
+    width: 1.75rem;
+    height: 1.75rem;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+  }
+
+  &__username {
+    margin-bottom: 0;
+    margin-top: 0;
+    margin-right: 0.5rem;
+    font-weight: 800;
+  }
+
+  &__date {
+    color: $primary__grey;
+    font-weight: 500;
+    margin-left: 0.3rem;
+    font-size: 0.85rem;
+  }
+
+  &__location {
+    margin-top: 0.1rem;
+    font-size: 0.8rem;
+  }
+
+  &__dots {
+    width: 0.8rem;
+    height: 0.24rem;
+  }
+
+  &__image {
+    height: 21rem;
     width: 100%;
     border-radius: 1%;
     object-fit: contain;

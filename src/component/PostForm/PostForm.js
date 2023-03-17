@@ -3,9 +3,6 @@ import { useNavigate } from "react-router-dom";
 import "./PostForm.scss";
 
 function PostForm({ setPosts }) {
-  // const modalRef = useRef();
-  // const overlayRef = useRef();
-  // const inputRef = useRef();
   const navigate = useNavigate();
 
   const onClickCancel = (_e) => {
@@ -14,20 +11,19 @@ function PostForm({ setPosts }) {
 
   const onClickSave = (e) => {
     e.preventDefault();
-    // if (e.taget.image.value.trim()) {
-    // }
 
-    // const file = e.target.image.files[0];
-    // const reader = new FileReader();
-    // reader.readAsDataURL(file);
-    // reader.onloadend = function () {
-    //   console.log(reader.result);
+    const description = e.target.description.value.trim();
+    const location = e.target.location.value.trim();
+
+    if (!description || !location) {
+      alert("Invalid Input");
+      return;
+    }
 
     axios
       .post(`http://localhost:8000/user/9/post`, {
-        // image: reader,
-        description: e.target.description.value,
-        location: e.target.location.value,
+        description,
+        location,
       })
       .then((res) => {
         axios
@@ -40,13 +36,18 @@ function PostForm({ setPosts }) {
       .catch((err) => {
         console.error(err);
       });
-    // };
+
     navigate("/");
   };
 
   return (
     <form className="upload" onSubmit={onClickSave}>
-      <img />
+      <div className="upload__image-box">
+        <img
+          className="upload__image"
+          src="https://ca.slack-edge.com/T043CEKTYLB-U042Y8QDHTR-fe54155f302f-512"
+        />
+      </div>
       <h3 className="upload__subtitle">Post photos here</h3>
       <input
         className="upload__input"
