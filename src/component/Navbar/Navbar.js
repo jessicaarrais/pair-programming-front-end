@@ -50,17 +50,17 @@ function Navbar() {
           <img className="navigation__icon" src={notificationsIcon} />
           <h3 className="navigation__item">Notifications</h3>
         </NavLink>
-        <NavLink to="/user/3/post" className="navigation__container">
+        <NavLink to="/home/user/3/post" className="navigation__container">
           <img className="navigation__icon" src={createIcon} />
           <h3 className="navigation__item">Create</h3>
         </NavLink>
-        <NavLink to="/user/9/profile" className="navigation__container">
+        <NavLink to="/home/user/9/profile" className="navigation__container">
           <img
             className="navigation__icon navigation__icon-patrick"
             src={patrick}
           />
           <NavLink
-            to="/user/9/profile"
+            to="/home/user/9/profile"
             className={({ isActive }) =>
               isActive ? "navigation__item--active" : "navigation__item"
             }
