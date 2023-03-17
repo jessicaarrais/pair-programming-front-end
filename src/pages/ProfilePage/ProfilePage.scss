@@ -1,0 +1,11 @@
+@use "../../styles/partials/mixins" as *;
+@use "../../styles/partials/variables" as *;
+
+
+.profile{
+
+    width: 66.5rem;
+    display: flex;
+    justify-content: center;
+
+}
