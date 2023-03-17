@@ -5,6 +5,7 @@ import { useState } from "react";
 import Home from "./pages/Home/Home";
 import Navbar from "./component/Navbar/Navbar";
 import CreatePost from "./pages/Post/CreatePost";
+import ProfilePage from "./pages/ProfilePage/ProfilePage";
 
 //stylesheet
 import "./styles/partials/_global.scss";
@@ -22,6 +23,7 @@ function App() {
           path="/user/:userId/post"
           element={<CreatePost setPosts={setPosts} />}
         />
+        <Route path="/profile" element={<ProfilePage />} />
       </Routes>
     </BrowserRouter>
   );
