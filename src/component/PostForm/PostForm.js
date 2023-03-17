@@ -49,12 +49,6 @@ function PostForm({ setPosts }) {
       <img />
       <h3 className="upload__subtitle">Post photos here</h3>
       <input
-        className="upload__button--select"
-        type="file"
-        name="image"
-        text="Select From Computer"
-      />
-      <input
         className="upload__input"
         type="text"
         name="location"

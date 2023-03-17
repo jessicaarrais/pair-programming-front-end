@@ -25,6 +25,11 @@
     text-decoration: none;
     color: $primary__dark;
     margin-bottom: 0.7rem;
+
+    &:hover{
+        background-color: #F9F9F9;
+        border-radius: 2%;
+    }
   }
 
   &__item {
