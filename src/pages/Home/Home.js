@@ -1,5 +1,5 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 
 //components
 import Post from "../../component/Post/Post";
@@ -23,11 +23,7 @@ const formatDate = (timeStamp) => {
   return todayDate;
 };
 
-function Home() {
-  // useState post
-
-  const [posts, setPosts] = useState([]);
-
+function Home({ posts, setPosts }) {
   //useEffect
   useEffect(() => {
     axios
@@ -37,8 +33,6 @@ function Home() {
       })
       .catch((err) => console.log(err));
   }, []);
-
-  console.log(posts);
 
   return (
     <div className="home">

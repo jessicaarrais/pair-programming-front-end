@@ -18,7 +18,6 @@ function Post({
   likes,
   description,
   comments,
-  key,
   userId,
   date,
 }) {
@@ -27,7 +26,7 @@ function Post({
       <div className="post">
         <div className="post__info">
           <div className="post__info-container">
-            <img className="post__avatar" src={lin} />
+            <img className="post__avatar" src={avatar} />
             <div>
               <h3 className="post__username">
                 {username} <strong className="post__date">.{date}</strong>
@@ -37,7 +36,7 @@ function Post({
           </div>
           <img className="post__dots" src={dots} />
         </div>
-        <img className="post__image" src={house} />
+        <img className="post__image" src={image} />
         <div className="post__icons">
           <div className="post__icons-left">
             <img className="post__icon" src={heart} />

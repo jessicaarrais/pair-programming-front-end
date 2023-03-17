@@ -2,51 +2,49 @@
 @use "../../styles/partials/variables" as *;
 
 .navigation {
+  width: 13.75rem;
+  height: 60rem;
+  position: fixed;
+  padding: $padding__nav;
+  border-right: 1px solid $primary__light-grey;
 
-    width: 13.75rem;
-    height: 60rem;
-    position: fixed;
-    padding: $padding__nav;
-    border-right: 1px solid $primary__light-grey;
+  &__logo {
+    width: 5.6rem;
+    margin-bottom: 2.5rem;
+  }
 
-    &__logo {
-        width: 5.6rem;
-        margin-bottom: 2.5rem;
+  &__list {
+    width: 100%;
+  }
 
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-decoration: none;
+    color: $primary__dark;
+    margin-bottom: 0.7rem;
+  }
+
+  &__item {
+    width: 10.4rem;
+    margin-left: 1rem;
+
+    &--active {
+      font-weight: 800;
     }
+  }
 
-    &__list {
-       width: 100%;
+  &__icon {
+    align-self: center;
+    width: 1.25rem;
+    height: 1.25rem;
+
+    &-patrick{
+        border-radius: 50%;
+        width: 1.5rem;
+        height: 1.5rem;
+        margin-right: 0
     }
-
-    &__container {
-        display: flex;
-        justify-content: center;
-        align-content:center;
-        text-decoration: none;
-        color: $primary__dark;
-    }
-
-    &__item {
-        width: 10.4rem;
-        margin-left: 1rem;
-
-    
-
-
-
-        &--active {
-            font-weight:800;
-        }
-    }
-
-    &__icon {
-
-        align-self: center;
-
-        width:1.25rem;
-        height: 1.25rem;
-
-    }
-
+  }
 }
