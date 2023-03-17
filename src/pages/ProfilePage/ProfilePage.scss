@@ -1,60 +1,91 @@
 @use "../../styles/partials/mixins" as *;
 @use "../../styles/partials/variables" as *;
 
-
 .profile {
+  width: 66.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: $padding__profile;
 
-    width: 66.5rem;
+  &__info {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    flex-wrap: nowrap;
+    margin-right: 18rem;
+    align-content: center;
+  }
+
+  &__username {
+    width: 40%;
+    margin-bottom: 0;
+  }
+
+  &__avatar {
+    width: 9.6rem;
+    height: 9.6rem;
+    border-radius: 50%;
+    margin-right: 3rem;
+    align-self: center;
+    padding: 0.3rem;
+    border: 1px solid $primary__light-grey;
+  }
+
+  &__follow {
+    display: flex;
+  }
+
+  &__following {
+    margin-top: 0.7rem;
+    margin-right: 1rem;
+    &-bold {
+      font-weight: 800;
+    }
+  }
+
+  &__posts {
+    width: 100%;
+    display: flex;
     flex-wrap: wrap;
-    padding: $padding__profile;
 
-    &__info {
-        display: flex;
-        flex-wrap: nowrap;
-        margin-right: 18rem;
+    &-container {
+      width: 100%;
+      flex-wrap: wrap;
 
+      border-top: 1px solid $primary__light-grey;
+      margin-top: 5rem;
+      display: flex;
+      justify-content: center;
     }
 
-    &__username {
-        width: 40%;
-        margin-bottom: 0;
-        
+    &-section {
+      margin-right: 4rem;
+      color: $primary__grey;
+      font-weight: 800;
+
+      &:first-child {
+        color: $primary__dark;
+      }
     }
-
-    &__avatar {
-        width: 9.6rem;
-        height: 9.6rem;
-        border-radius: 50%;
-        margin-right: 3rem;
-        padding: 0.3rem;
-        border: 1px solid $primary__light-grey;
+    &-name {
     }
-
-    &__follow {
-        display: flex;
+    &-active {
+      font-weight: 800;
     }
+  }
 
-    &__following {
-        margin-top:0.7rem;
-        margin-right: 1rem;
-        &-bold{
-            font-weight: 800;
-        }
+  &__post {
+    &-image {
+      width: 16.4rem;
+      height: 16.4rem;
+      object-fit: cover;
     }
+  }
 
-    &__posts{
-        width: 100%;
-        display: flex;
-
-        &-container {
-            width: 100%;
-            border-top: 1px solid $primary__light-grey;
-            margin-top: 5rem;
-            display: flex;
-        }
+  &__images {
+    &-container {
+      width: 100%;
+      margin-top: 1.5rem;
     }
-
+  }
 }

@@ -34,15 +34,11 @@ function ProfilePage() {
                 <h3 className="profile__following">{`${user.following} following`}</h3>
               </div>
               <div className="profile__bio">
-                <h3>{user.bio}</h3>
-                <p>
-                  * Tiny home inspiration & adventure . * Share your story
-                  @tinyhomesnew 🌲🏠 * Tiny Home Plans now available!
-                </p>
+                <h3>{user.location}</h3>
+                <p>{user.bio}</p>
               </div>
             </div>
-          </div>
-          <div>
+
             <div className="profile__posts">
               <div className="profile__posts-container">
                 <div className="profile__posts-section">
@@ -58,12 +54,12 @@ function ProfilePage() {
                   <h3 className="profile__posts-name">TAGGED</h3>
                 </div>
               </div>
-              {user.posts.map((post) => (
-                <div key={post.id} className="profile__images-container">
-                  <img className="profile__image" src={post.image} />
-                </div>
-              ))}
             </div>
+            {user.posts.map((post) => (
+              <div key={post.id} className="profile__images-container">
+                <img className="profile__post-image" src={post.image} />
+              </div>
+            ))}
           </div>
         </>
       )}
