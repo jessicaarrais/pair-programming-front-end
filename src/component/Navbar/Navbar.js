@@ -14,8 +14,11 @@ import patrick from "../../assets/images/patrick.png";
 
 // stylesheet
 import "./Navbar.scss";
+import { useState } from "react";
 
 function Navbar() {
+  const [active, setActive] = useState(false);
+
   return (
     <div className="navigation">
       <img className="navigation__logo" src={logo} />
@@ -44,7 +47,7 @@ function Navbar() {
           <img className="navigation__icon" src={createIcon} />
           <h3 className="navigation__item">Create</h3>
         </NavLink>
-        <NavLink className="navigation__container">
+        <NavLink to="/user/9/profile" className="navigation__container">
           <img
             className="navigation__icon navigation__icon-patrick"
             src={patrick}
