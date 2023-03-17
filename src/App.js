@@ -23,7 +23,7 @@ function App() {
           path="/user/:userId/post"
           element={<CreatePost setPosts={setPosts} />}
         />
-        <Route path="/profile" element={<ProfilePage />} />
+        <Route path="/user/:userId/profile" element={<ProfilePage />} />
       </Routes>
     </BrowserRouter>
   );

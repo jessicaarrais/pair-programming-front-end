@@ -40,7 +40,6 @@ function Home({ posts, setPosts }) {
         posts.map((post) => {
           return (
             <Post
-              post={post}
               username={post.username}
               avatar={post.avatar}
               location={post.location}

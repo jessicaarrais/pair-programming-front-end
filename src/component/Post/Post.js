@@ -9,6 +9,7 @@ import save from "../../assets/icons/save.png";
 
 // stylesheet
 import "./Post.scss";
+import { Link } from "react-router-dom";
 
 function Post({
   username,
@@ -26,7 +27,9 @@ function Post({
       <div className="post">
         <div className="post__info">
           <div className="post__info-container">
-            <img className="post__avatar" src={avatar} />
+            <Link to={`user/${userId}/profile`}>
+              <img className="post__avatar" src={avatar} />
+            </Link>
             <div>
               <h3 className="post__username">
                 {username} <strong className="post__date">.{date}</strong>
