@@ -4,6 +4,8 @@ import { useParams } from "react-router-dom";
 // stylesheet
 import "./ProfilePage.scss";
 
+import patrick from "../../assets/images/patrick.png";
+
 function ProfilePage() {
   const [user, setUser] = useState();
   const { userId } = useParams();
@@ -24,7 +26,7 @@ function ProfilePage() {
         <>
           <div className="profile">
             <div className="profile__info">
-              <img classname="profile__avatar" src={user.avatar} />
+              <img className="profile__avatar" src={user.avatar} />
               <h2 className="profile__username">{user.username}</h2>
               <div className="profile__follow">
                 <h3 className="profile__following">{`${user.posts.length} posts`}</h3>
