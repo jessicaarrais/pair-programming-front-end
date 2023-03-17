@@ -20,6 +20,26 @@ function ProfilePage() {
           </p>
         </div>
       </div>
+
+      <div className="profile__posts">
+        <div className="profile__posts-container">
+          <div className="profile__posts-section">
+            <img className="profile__posts-icon" />
+            <h3 className="profile__posts-name">POSTS</h3>
+          </div>
+          <div className="profile__posts-section">
+            <img className="profile__posts-icon" />
+            <h3 className="profile__posts-name">REELS</h3>
+          </div>
+          <div className="profile__posts-section">
+            <img className="profile__posts-icon" />
+            <h3 className="profile__posts-name">TAGGED</h3>
+          </div>
+        </div>
+        <div className="profile__images-container">
+          <img className="profile__image" />
+        </div>
+      </div>
     </div>
   );
 }
