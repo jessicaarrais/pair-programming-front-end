@@ -23,9 +23,16 @@ function Navbar() {
     <div className="navigation">
       <img className="navigation__logo" src={logo} />
       <div className="navigation__list">
-        <NavLink to="/" className="navigation__container">
+        <NavLink to="/home" className="navigation__container">
           <img className="navigation__icon" src={homeIcon} />
-          <h3 className="navigation__item navigation__item--active">Home</h3>
+          <NavLink
+            to="/home"
+            className={({ isActive }) =>
+              isActive ? "navigation__item--active" : "navigation__item"
+            }
+          >
+            Home
+          </NavLink>
         </NavLink>
         <NavLink className="navigation__container">
           <img className="navigation__icon" src={searchIcon} />
@@ -52,7 +59,14 @@ function Navbar() {
             className="navigation__icon navigation__icon-patrick"
             src={patrick}
           />
-          <h3 className="navigation__item">Profile</h3>
+          <NavLink
+            to="/user/9/profile"
+            className={({ isActive }) =>
+              isActive ? "navigation__item--active" : "navigation__item"
+            }
+          >
+            Profile
+          </NavLink>
         </NavLink>
       </div>
     </div>

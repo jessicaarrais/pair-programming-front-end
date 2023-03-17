@@ -18,12 +18,15 @@ function App() {
     <BrowserRouter>
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home posts={posts} setPosts={setPosts} />} />
         <Route
-          path="/user/:userId/post"
+          path="/home"
+          element={<Home posts={posts} setPosts={setPosts} />}
+        />
+        <Route
+          path="/home/user/:userId/post"
           element={<CreatePost setPosts={setPosts} />}
         />
-        <Route path="/user/:userId/profile" element={<ProfilePage />} />
+        <Route path="/home/user/:userId/profile" element={<ProfilePage />} />
       </Routes>
     </BrowserRouter>
   );

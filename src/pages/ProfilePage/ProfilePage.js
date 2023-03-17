@@ -48,7 +48,7 @@ function ProfilePage() {
                   </h3>
                 </div>
                 <div className="profile__bio">
-                  <h3 className="profile__location">📍{user.location}</h3>
+                  <h3 className="profile__location">📍 {user.location}</h3>
                   <p>{user.bio}</p>
                 </div>
               </div>

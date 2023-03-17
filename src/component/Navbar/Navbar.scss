@@ -8,6 +8,7 @@
   padding: $padding__nav;
   border-right: 1px solid $primary__light-grey;
   z-index: 1;
+  color: $primary__dark;
 
   &__logo {
     width: 5.6rem;
@@ -25,6 +26,7 @@
     text-decoration: none;
     color: $primary__dark;
     margin-bottom: 0.7rem;
+    height: 3rem;
 
     &:hover{
         background-color: #F9F9F9;
@@ -35,9 +37,24 @@
   &__item {
     width: 10.4rem;
     margin-left: 1rem;
+    color: $primary__dark;
+    margin-right: 0;
+    align-items: center;
+    flex-wrap: wrap;
+    align-self: center;
+    
+
 
     &--active {
       font-weight: 800;
+      text-decoration: none;
+      color: $primary__dark;
+      display: flex;
+      justify-content: left;
+      width: 100%;
+      align-items: center;
+      margin-left: 1rem;
+    
     }
   }
 
@@ -50,7 +67,6 @@
         border-radius: 50%;
         width: 1.5rem;
         height: 1.5rem;
-        margin-right: 0
     }
   }
 }
