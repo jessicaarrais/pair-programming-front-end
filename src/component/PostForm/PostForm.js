@@ -6,7 +6,7 @@ function PostForm({ setPosts }) {
   const navigate = useNavigate();
 
   const onClickCancel = (_e) => {
-    navigate("/");
+    navigate("/home");
   };
 
   const onClickSave = (e) => {
@@ -37,7 +37,7 @@ function PostForm({ setPosts }) {
         console.error(err);
       });
 
-    navigate("/");
+    navigate("/home");
   };
 
   return (
@@ -49,18 +49,18 @@ function PostForm({ setPosts }) {
         />
       </div>
       <h3 className="upload__subtitle">Post photos here</h3>
-      <input
-        className="upload__input"
-        type="text"
-        name="location"
-        placeholder="Location"
-      />
-      <input
-        className="upload__input"
-        type="text"
-        name="description"
-        placeholder="description"
-      />
+      <div className="upload__input-box">
+        <label className="upload__input-label" for="location">
+          Location:
+        </label>
+        <input className="upload__input" type="text" name="location" />
+      </div>
+      <div className="upload__input-box">
+        <label className="upload__input-label" for="description">
+          Description:
+        </label>
+        <input className="upload__input" type="text" name="description" />
+      </div>
       <div className="upload__button-box">
         <button
           className="upload__button upload__button--cancel"
