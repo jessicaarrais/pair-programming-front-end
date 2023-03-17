@@ -1,6 +1,9 @@
+// stylesheet
+import "./ProfilePage.scss";
+
 function ProfilePage() {
   return (
-    <>
+    <div className="profile">
       <div className="profile__info">
         <img classname="profile__avatar" />
         <h2 className="profile__username">Patrick</h2>
@@ -16,10 +19,8 @@ function ProfilePage() {
             @tinyhomesnew 🌲🏠 * Tiny Home Plans now available!
           </p>
         </div>
-
-        <div className="profile__bio"></div>
       </div>
-    </>
+    </div>
   );
 }
 
