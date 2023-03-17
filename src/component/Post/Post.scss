@@ -6,7 +6,6 @@
     margin-left: 20rem;
     margin-right: 29rem;
     margin-top: 3rem;
-
     padding-bottom: 0.6rem;
     border-bottom: 1px solid $primary__light-grey;
 
@@ -38,6 +37,13 @@
         font-weight: 800;
     }
 
+    &__date {
+        color: $primary__grey;
+        font-weight: 500;
+        margin-left: 0.3rem;
+        font-size: 0.85rem;
+    }
+
     &__location {
         margin-top: 0.1rem;
         font-size: 0.8rem;
@@ -50,7 +56,8 @@
   
     &__image {
         height: 31rem;
-        width: 32rem;
+        width: 100%;
+        border-radius: 1%;
     }
 
     &__icon {

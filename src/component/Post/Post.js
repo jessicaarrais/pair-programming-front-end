@@ -10,7 +10,18 @@ import save from "../../assets/icons/save.png";
 // stylesheet
 import "./Post.scss";
 
-function Post() {
+function Post({
+  username,
+  avatar,
+  location,
+  image,
+  likes,
+  description,
+  comments,
+  key,
+  userId,
+  date,
+}) {
   return (
     <>
       <div className="post">
@@ -18,8 +29,10 @@ function Post() {
           <div className="post__info-container">
             <img className="post__avatar" src={lin} />
             <div>
-              <h3 className="post__username">Lin-lin-lin</h3>
-              <div className="post__location">New York</div>
+              <h3 className="post__username">
+                {username} <strong className="post__date">.{date}</strong>
+              </h3>
+              <div className="post__location">{location}</div>
             </div>
           </div>
           <img className="post__dots" src={dots} />
@@ -33,16 +46,16 @@ function Post() {
           </div>
           <img className="post__icon" src={save} />
         </div>
-        <h3 className="post__likes">627 likes</h3>
+        <h3 className="post__likes">{likes} likes</h3>
         <div className="post__comments">
-          <h3 className="post__username">lin-lin</h3>
-          <p className="post__description">So cute</p>
+          <h3 className="post__username">{username}</h3>
+          <p className="post__description">{description}</p>
         </div>
         <div className="post__more">
           <img className="post__more-icon" src={dots} />
           <p className="post__more-text">more</p>
         </div>
-        <p className="post__comment-number">View all 4 comments</p>
+        <p className="post__comment-number">View all {comments} comments</p>
         <p className="post__comment-add">Add a comment...</p>
       </div>
     </>
