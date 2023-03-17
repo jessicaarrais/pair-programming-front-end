@@ -9,7 +9,7 @@ function Sidebar() {
   return (
     <div className="sidebar">
       <div className="profile-sidebar">
-        <Link to={`/user/9/profile`}>
+        <Link to={`/home/user/9/profile`}>
           <img className="profile__image" src={profilePhoto} />
         </Link>
         <div className="profile__content">

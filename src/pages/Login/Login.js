@@ -20,7 +20,7 @@ function Login() {
         </div>
         <h2>Welcome Back Patrick!</h2>
         <div className="login__input-box">
-          <label className="login__input-label" for="username">
+          <label className="login__input-label" htmlFor="username">
             Username:
           </label>
           <input
@@ -31,7 +31,7 @@ function Login() {
           />
         </div>
         <div className="login__input-box">
-          <label className="login__input-label" for="password">
+          <label className="login__input-label" htmlFor="password">
             Password:
           </label>
           <input

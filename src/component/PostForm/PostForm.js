@@ -50,13 +50,13 @@ function PostForm({ setPosts }) {
       </div>
       <h3 className="upload__subtitle">Post photos here</h3>
       <div className="upload__input-box">
-        <label className="upload__input-label" for="location">
+        <label className="upload__input-label" htmlFor="location">
           Location:
         </label>
         <input className="upload__input" type="text" name="location" />
       </div>
       <div className="upload__input-box">
-        <label className="upload__input-label" for="description">
+        <label className="upload__input-label" htmlFor="description">
           Description:
         </label>
         <input className="upload__input" type="text" name="description" />

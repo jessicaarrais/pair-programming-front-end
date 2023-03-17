@@ -23,7 +23,7 @@ function Navbar() {
     <div className="navigation">
       <img className="navigation__logo" src={logo} />
       <div className="navigation__list">
-        <NavLink to="/" className="navigation__container">
+        <NavLink to="/home" className="navigation__container">
           <img className="navigation__icon" src={homeIcon} />
           <h3 className="navigation__item navigation__item--active">Home</h3>
         </NavLink>
@@ -43,11 +43,11 @@ function Navbar() {
           <img className="navigation__icon" src={notificationsIcon} />
           <h3 className="navigation__item">Notifications</h3>
         </NavLink>
-        <NavLink to="/user/3/post" className="navigation__container">
+        <NavLink to="/home/user/3/post" className="navigation__container">
           <img className="navigation__icon" src={createIcon} />
           <h3 className="navigation__item">Create</h3>
         </NavLink>
-        <NavLink to="/user/9/profile" className="navigation__container">
+        <NavLink to="/home/user/9/profile" className="navigation__container">
           <img
             className="navigation__icon navigation__icon-patrick"
             src={patrick}
