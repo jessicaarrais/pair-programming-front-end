@@ -2,10 +2,59 @@
 @use "../../styles/partials/variables" as *;
 
 
-.profile{
+.profile {
 
     width: 66.5rem;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: $padding__profile;
+
+    &__info {
+        display: flex;
+        flex-wrap: nowrap;
+        margin-right: 18rem;
+
+    }
+
+    &__username {
+        width: 40%;
+        margin-bottom: 0;
+        
+    }
+
+    &__avatar {
+        width: 9.6rem;
+        height: 9.6rem;
+        border-radius: 50%;
+        margin-right: 3rem;
+        padding: 0.3rem;
+        border: 1px solid $primary__light-grey;
+    }
+
+    &__follow {
+        display: flex;
+    }
+
+    &__following {
+        margin-top:0.7rem;
+        margin-right: 1rem;
+        &-bold{
+            font-weight: 800;
+        }
+    }
+
+    &__posts{
+        width: 100%;
+        display: flex;
+
+        &-container {
+            width: 100%;
+            border-top: 1px solid $primary__light-grey;
+            margin-top: 5rem;
+            display: flex;
+        }
+    }
 
 }
