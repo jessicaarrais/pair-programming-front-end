@@ -15,6 +15,7 @@
         display: flex;
         flex-wrap: nowrap;
         margin-right: 18rem;
+        align-content: center;
 
     }
 
@@ -29,6 +30,7 @@
         height: 9.6rem;
         border-radius: 50%;
         margin-right: 3rem;
+        align-self: center;
         padding: 0.3rem;
         border: 1px solid $primary__light-grey;
     }
@@ -54,6 +56,19 @@
             border-top: 1px solid $primary__light-grey;
             margin-top: 5rem;
             display: flex;
+            justify-content: center;
+        }
+
+        &-section {
+
+            margin-right: 4rem;
+            color: $primary__grey;
+            font-weight: 800;
+
+            &:first-child{
+                color: $primary__dark;
+                font-weight: bold;
+            }
         }
     }
 
